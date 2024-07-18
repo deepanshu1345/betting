@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Get Match Results{% endblock %}
+{% block content %}
+<h1 class="mt-4">Get Match Results</h1>
+
+<form action="{{ url_for('match_results') }}" method="GET">
+    <div class="form-group">
+        <label for="league_id">League ID</label>
+        <input type="text" class="form-control" id="league_id" name="league_id" required>
+    </div>
+    <div class="form-group">
+        <label for="season">Season</label>
+        <input type="text" class="form-control" id="season" name="season" required>
+    </div>
+    <div class="form-group">
+        <label for="team_id">Team ID (optional)</label>
+        <input type="text" class="form-control" id="team_id" name="team_id">
+    </div>
+    <button type="submit" class="btn btn-primary">Get Results</button>
+</form>
+
+<a href="{{ url_for('dashboard') }}" class="btn btn-primary mt-4">Back to Dashboard</a>
+{% endblock %}

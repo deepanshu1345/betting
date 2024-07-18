@@ -1,0 +1,47 @@
+<!-- dashboard.html -->
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-5">Dashboard</h1>
+    <p>Welcome, {{ session['username'] }}!</p>
+    <p>Your remaining balance: ${{ remaining_balance }}</p>
+
+    <h2>Upcoming Matches</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Home Team</th>
+                <th></th>
+                <th>Away Team</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for match in upcoming_matches %}
+                <tr>
+                    <td>{{ match.date }}</td>
+                    <td>{{ match.time }}</td>
+                    <td>
+                        <img src="{{ match.home_logo }}" alt="{{ match.home_team }}" width="50">
+                        {{ match.home_team }}
+                    </td>
+                    <td>vs</td>
+                    <td>
+                        <img src="{{ match.away_logo }}" alt="{{ match.away_team }}" width="50">
+                        {{ match.away_team }}
+                    </td>
+                    <td>
+                        <a href="{{ url_for('place_bet', team=match.home_team) }}" class="btn btn-primary">Bet on {{ match.home_team }}</a>
+                        <a href="{{ url_for('place_bet', team=match.away_team) }}" class="btn btn-primary">Bet on {{ match.away_team }}</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Match Results{% endblock %}
+{% block content %}
+<h1 class="mt-4">Match Results</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Home Team</th>
+            <th>Away Team</th>
+            <th>Home Score</th>
+            <th>Away Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for result in results %}
+        <tr>
+            <td>{{ result.date }}</td>
+            <td>{{ result.home_team }}</td>
+            <td>{{ result.away_team }}</td>
+            <td>{{ result.home_score }}</td>
+            <td>{{ result.away_score }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{{ url_for('dashboard') }}" class="btn btn-primary mt-4">Back to Dashboard</a>
+{% endblock %}

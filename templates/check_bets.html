@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Check Bets{% endblock %}
+{% block content %}
+<h1 class="mt-4">Your Bets</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Team</th>
+            <th>Amount</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for bet in bets %}
+        <tr>
+            <td>{{ bet.team }}</td>
+            <td>{{ bet.amount }}</td>
+            <td>{{ bet.result }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

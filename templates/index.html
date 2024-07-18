@@ -1,19 +1,9 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
-<div class="jumbotron">
-    <h1 class="display-4">Welcome to Football Betting</h1>
-    <p class="lead">Sign up to start betting with fake money on your favorite football teams.</p>
-    <form action="/sign_up" method="post" class="form-inline">
-        <div class="form-group mx-sm-3 mb-2">
-            <label for="username" class="sr-only">Username</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
-        </div>
-        <button type="submit" class="btn btn-primary mb-2">Sign Up</button>
-    </form>
-    <div class="mt-3">
-        <a href="/standings" class="btn btn-info">View Standings</a>
-        <a href="/place_bet" class="btn btn-success">Place a Bet</a>
-    </div>
-</div>
+<h1 class="mt-4">Welcome to Football Betting</h1>
+{% if not session.username %}
+    <a href="{{ url_for('login') }}" class="btn btn-primary mr-2">Login</a>
+    <a href="{{ url_for('sign_up') }}" class="btn btn-success">Sign Up</a>
+{% endif %}
 {% endblock %}

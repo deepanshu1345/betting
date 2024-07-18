@@ -1,0 +1,18 @@
+<!-- place_bet.html -->
+{% extends "base.html" %}
+
+{% block title %}Place Bet{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-5">Place Bet on {{ team }}</h1>
+    <form method="post">
+        <div class="form-group">
+            <label for="amount">Bet Amount:</label>
+            <input type="number" class="form-control" id="amount" name="amount" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Place Bet</button>
+    </form>
+    <a href="{{ url_for('dashboard') }}" class="btn btn-secondary mt-3">Back to Dashboard</a>
+</div>
+{% endblock %}
