@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Place a Bet{% endblock %}
+{% block content %}
+<h1 class="mt-4">Place a Bet</h1>
+<form action="/place_bet" method="post">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+        <label for="team">Team</label>
+        <input type="text" class="form-control" id="team" name="team" required>
+    </div>
+    <div class="form-group">
+        <label for="amount">Bet Amount</label>
+        <input type="number" class="form-control" id="amount" name="amount" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Place Bet</button>
+</form>
+<a href="/" class="btn btn-secondary mt-3">Back</a>
+{% endblock %}

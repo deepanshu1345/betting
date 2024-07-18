@@ -1,0 +1,85 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="4">
+            <item index="0" class="java.lang.String" itemvalue="charset" />
+            <item index="1" class="java.lang.String" itemvalue="allingment" />
+            <item index="2" class="java.lang.String" itemvalue="position" />
+            <item index="3" class="java.lang.String" itemvalue="form-group" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="10">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="body" />
+            <item index="7" class="java.lang.String" itemvalue="input" />
+            <item index="8" class="java.lang.String" itemvalue="br" />
+            <item index="9" class="java.lang.String" itemvalue="from" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="18">
+            <item index="0" class="java.lang.String" itemvalue="tweepy" />
+            <item index="1" class="java.lang.String" itemvalue="nltk" />
+            <item index="2" class="java.lang.String" itemvalue="scikit_learn" />
+            <item index="3" class="java.lang.String" itemvalue="streamlit" />
+            <item index="4" class="java.lang.String" itemvalue="numpy" />
+            <item index="5" class="java.lang.String" itemvalue="alpha_vantage" />
+            <item index="6" class="java.lang.String" itemvalue="pandas" />
+            <item index="7" class="java.lang.String" itemvalue="tensorflow" />
+            <item index="8" class="java.lang.String" itemvalue="seaborn" />
+            <item index="9" class="java.lang.String" itemvalue="yfinance" />
+            <item index="10" class="java.lang.String" itemvalue="tweet-preprocessor" />
+            <item index="11" class="java.lang.String" itemvalue="matplotlib" />
+            <item index="12" class="java.lang.String" itemvalue="statsmodels" />
+            <item index="13" class="java.lang.String" itemvalue="keras" />
+            <item index="14" class="java.lang.String" itemvalue="flask" />
+            <item index="15" class="java.lang.String" itemvalue="textblob" />
+            <item index="16" class="java.lang.String" itemvalue="pydantic_core" />
+            <item index="17" class="java.lang.String" itemvalue="typing_extensions" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="W605" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+          <option value="N801" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="str.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
